@@ -2,7 +2,7 @@
 
 import sys
 
-f = open(sys.argv[0])
+f = open(sys.argv[1])
 
 class canframe:
 
@@ -11,8 +11,16 @@ class canframe:
         self.addr=addr
         self.payload=payload
 
-frames=dict()
+frames=[]
 
 for line in f:
-    print line.split()
+    s = line.split()
+    t = s[0].strip('()')
+    a = s[2].split('#')[0]
+    p = s[2].split('#')[1]
+    frames.append( canframe(t, a, p) )
+
+print "Time: ", frames[0].time
+print "Addr: ", frames[0].addr
+print "Data: ", frames[0].payload
 
