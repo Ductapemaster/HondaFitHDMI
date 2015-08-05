@@ -1,9 +1,9 @@
 # HondaFitHDMI
 Various efforts into hacking the 2015 Honda Fit head unit to allow HDMI input while driving
 
-Known CAN ID's so far:
+##Known CAN ID's
 
-**0x12F85150**
+####0x12F85150
 Shifter Position (note, all 8 bytes are included in this payload - only the upper two represent the shifter state)
 
 |Gear|Byte[0]|Byte[1]|
@@ -15,7 +15,7 @@ Shifter Position (note, all 8 bytes are included in this payload - only the uppe
 |S (Sport)   |0x00   |0x43   |
 |X (Indeterminate)   |0x00   |0x03   |
 
-**0x12F83010**
+####0x12F83010
 Driver's side doors
 
 |Driver|Driver Rear|Byte[0]|
@@ -25,10 +25,24 @@ Driver's side doors
 |Closed|Open|0x20??|
 |Open|Open|0xA0|
 
-**0x12F84310**
+####0x12F84310
 Trunk Door
 
 |Trunk State|Byte[0]|
 |:-:|:-:|
 |Closed|0x00|
 |Open|0x80|
+
+##Other Notes
+* The head unit displays info from various sources in the car
+  * Live MPG
+  * Trip A data - total mileage, etc
+  * ???
+* The head unit sends various data to the car
+  * Sets the clock in the gauge cluster
+  * ???
+* Connectors used on the unit:
+  * JAE MX34 series **Need to confirm**
+  * https://jae-connectors.com/en/general_en.cfm
+  * Male Cable-end: MX34020SF1
+  * Female PCB Socket: MX34020NF1
