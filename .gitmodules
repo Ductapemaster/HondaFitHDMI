@@ -1,0 +1,3 @@
+[submodule "toyothack"]
+	path = toyothack
+	url = https://github.com/Ductapemaster/toyothack.git
