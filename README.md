@@ -43,6 +43,9 @@ Trunk Door
   * ???
 * Connectors used on the unit:
   * JAE MX34 series **Need to confirm**
-  * https://jae-connectors.com/en/general_en.cfm
   * Male Cable-end: MX34020SF1
+    * http://www.mouser.com/ProductDetail/JAE-Electronics/MX34020SF1/?qs=sGAEpiMZZMs7eK6h2EBtKnWTrtNQq8%252bVtTwgaPJDb5g%3d
   * Female PCB Socket: MX34020NF1
+    * https://estore.heilind.com/MX34020NF1/JAEMX34020NF1.html
+  * Crimp Pins
+    * http://www.mouser.com/Search/ProductDetail.aspx?R=M34S75C4F1virtualkey65610000virtualkey656-M34S75C4F1
