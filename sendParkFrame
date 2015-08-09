@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while true
+do
+    cansend can0 12F85150#4003000060
+    echo "Frame sent"
+    sleep 1
+done
