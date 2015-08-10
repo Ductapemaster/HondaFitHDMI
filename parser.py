@@ -94,7 +94,7 @@ parseLog( open( workingDir + inFile ) )
 for arbId in frameDict:
     payloadSet, entropy = findPayloadEntropy( frameDict[arbId] )
     if len(payloadSet) > 1 and len( frameDict[arbId] ) > 1:
-        print '0x{0} Unique: {2:4d}, Total: {3:4d} Entropy: {1:.2%}'.format(arbId, entropy, len(payloadSet), len( canFrameArray ))
+        print '0x{0} Unique: {2:4d}, Total: {3:4d} Entropy: {1:.2%}'.format(arbId, entropy, len(payloadSet), len( frameDict[arbId] ))
 
 # Parse all data into a CSV file.  Keeps same name as log file.
 csvFile = workingDir + '/' + inFile[:len(inFile)-3] + 'csv'
