@@ -1,15 +1,14 @@
-
-
 // -------------------------------------------------------------
-// can_loopback for Teensy 3.1
+// can_passthrough for Teensy 3.1
+// by ductapemaster
 //
-// MCP2515 interface sends frame out and internal CAN interface receives it.
-// Received data is passed to the serial port.
+// Receives on internal CAN interface and copies all data to 
+// MCP2515 interface.  Works only in one direction.
 
 #include <FlexCAN.h>
 #include <teensy_mcp_can.h>
-//#include <SPI.h>
 #include <spi4teensy3.h>
+//#include <SPI.h>
 
 // LED for receive indication.  Can't use onboard one because it shares the SPI SCLK pin
 int led = 14;
@@ -63,13 +62,14 @@ void setup(void)
   delay(1000);
   
   // F() stores string in flash rather than RAM
-  Serial.println(F("Teensy CAN Bus Loopback Test"));
+  Serial.println(F("Teensy CAN Passthrough Test"));
 
   Serial.print(F("Initializing MCP2515 interface..."));
 
   // Attempt to initialize module
   while (CAN_OK != CANOut.begin(CAN_125KBPS))
   {
+    // Loops forever - probably should implement some sort of timeout.  Watchdog?
     Serial.print(".");
     delay(100);
   }
@@ -86,17 +86,30 @@ void loop(void)
 
       // Toggle our LED to show bus activity
       digitalWrite(led, 1);
-      printCanFrame(rxmsg);
+      //printCanFrame(rxmsg);
+      if (rxmsg.id == 0x12F85150)
+      {
+        Serial.println("changing gear to park!");
+        Serial.print("before: ");
+        printCanFrame(rxmsg);
+        rxmsg.buf[0] = 0x40;
+        rxmsg.buf[1] = 0x03;
+        Serial.print("after: ");
+        printCanFrame(rxmsg);
+      }
+      
+      CANOut.sendMsgBuf(rxmsg.id, 1, rxmsg.len, rxmsg.buf);
+
       
     }
-    delay(10);
+    //delay(10);
     digitalWrite(led, 0);
 
-    delay(250);
+    //delay(250);
 
-    CANOut.sendMsgBuf(0x1ABC1234, 1, 8, buf);
-
-    delay(250);
+    // ID, CAN Mode: 1=extended, buffer length, buffer
+    
+    //delay(250);
 
 }
 
