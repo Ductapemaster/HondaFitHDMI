@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="7.3.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="CON_10X2_JAE_MX34020NF1">
+<pad name="P16" x="2" y="-0.55" drill="1" rot="R180"/>
+<pad name="P17" x="2" y="-2.75" drill="1" rot="R180"/>
+<pad name="P18" x="2" y="-4.95" drill="1" rot="R180"/>
+<pad name="P19" x="2" y="-7.15" drill="1" rot="R180"/>
+<pad name="P20" x="2" y="-9.35" drill="1" rot="R180"/>
+<pad name="P15" x="2" y="1.65" drill="1" rot="R180"/>
+<pad name="P14" x="2" y="3.85" drill="1" rot="R180"/>
+<pad name="P13" x="2" y="6.05" drill="1" rot="R180"/>
+<pad name="P12" x="2" y="8.25" drill="1" rot="R180"/>
+<pad name="P11" x="2" y="10.45" drill="1" rot="R180"/>
+<pad name="P5" x="-2" y="0.55" drill="1" rot="R180"/>
+<pad name="P6" x="-2" y="-1.65" drill="1" rot="R180"/>
+<pad name="P7" x="-2" y="-3.85" drill="1" rot="R180"/>
+<pad name="P8" x="-2" y="-6.05" drill="1" rot="R180"/>
+<pad name="P9" x="-2" y="-8.25" drill="1" rot="R180"/>
+<pad name="P4" x="-2" y="2.75" drill="1" rot="R180"/>
+<pad name="P3" x="-2" y="4.95" drill="1" rot="R180"/>
+<pad name="P2" x="-2" y="7.15" drill="1" rot="R180"/>
+<pad name="P1" x="-2" y="9.35" drill="1" rot="R180"/>
+<pad name="P10" x="-2" y="-10.45" drill="1" rot="R180"/>
+<hole x="7.3" y="11" drill="3.2"/>
+<hole x="7.3" y="-11" drill="3.2"/>
+<wire x1="18" y1="14" x2="18" y2="-14" width="0.127" layer="21"/>
+<wire x1="18" y1="-14" x2="5" y2="-14" width="0.127" layer="21"/>
+<wire x1="5" y1="-14" x2="5" y2="14" width="0.127" layer="21"/>
+<wire x1="5" y1="14" x2="18" y2="14" width="0.127" layer="21"/>
+<text x="-2.5" y="11.5" size="1.27" layer="21" rot="SR270">1</text>
+<text x="1.5" y="13.5" size="1.27" layer="21" rot="SR270">11</text>
+<text x="-2.5" y="-12" size="1.27" layer="21" rot="SR270">10</text>
+<text x="1.5" y="-11" size="1.27" layer="21" rot="SR270">20</text>
+</package>
+</packages>
+<symbols>
+<symbol name="CON_10X2F_JAE_MX34020NF1">
+<pin name="P1" x="-5.08" y="25.4" length="middle"/>
+<pin name="P2" x="-5.08" y="20.32" length="middle"/>
+<pin name="P3" x="-5.08" y="15.24" length="middle"/>
+<pin name="P4" x="-5.08" y="10.16" length="middle"/>
+<pin name="P5" x="-5.08" y="5.08" length="middle"/>
+<pin name="P6" x="-5.08" y="0" length="middle"/>
+<pin name="P7" x="-5.08" y="-5.08" length="middle"/>
+<pin name="P8" x="-5.08" y="-10.16" length="middle"/>
+<pin name="P9" x="-5.08" y="-15.24" length="middle"/>
+<pin name="P10" x="-5.08" y="-20.32" length="middle"/>
+<pin name="P11" x="-5.08" y="27.94" length="middle"/>
+<pin name="P12" x="-5.08" y="22.86" length="middle"/>
+<pin name="P13" x="-5.08" y="17.78" length="middle"/>
+<pin name="P14" x="-5.08" y="12.7" length="middle"/>
+<pin name="P15" x="-5.08" y="7.62" length="middle"/>
+<pin name="P16" x="-5.08" y="2.54" length="middle"/>
+<pin name="P17" x="-5.08" y="-2.54" length="middle"/>
+<pin name="P18" x="-5.08" y="-7.62" length="middle"/>
+<pin name="P19" x="-5.08" y="-12.7" length="middle"/>
+<pin name="P20" x="-5.08" y="-17.78" length="middle"/>
+<wire x1="0" y1="35.56" x2="0" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="0" y1="-27.94" x2="33.02" y2="-27.94" width="0.254" layer="94"/>
+<wire x1="33.02" y1="-27.94" x2="33.02" y2="35.56" width="0.254" layer="94"/>
+<wire x1="33.02" y1="35.56" x2="0" y2="35.56" width="0.254" layer="94"/>
+<circle x="12.7" y="33.02" radius="2.54" width="0.254" layer="94"/>
+<circle x="12.7" y="-25.4" radius="2.54" width="0.254" layer="94"/>
+<text x="0" y="35.56" size="1.778" layer="94">&gt;NAME</text>
+<text x="0" y="-30.48" size="1.778" layer="94">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CON_10X2F_JAE_MX34020NF1">
+<description>&lt;b&gt;JAE MX34 Series Connector, 10x2 Rows&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="CON_10X2F_JAE_MX34020NF1" x="-15.24" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="CON_10X2_JAE_MX34020NF1">
+<connects>
+<connect gate="G$1" pin="P1" pad="P1"/>
+<connect gate="G$1" pin="P10" pad="P10"/>
+<connect gate="G$1" pin="P11" pad="P11"/>
+<connect gate="G$1" pin="P12" pad="P12"/>
+<connect gate="G$1" pin="P13" pad="P13"/>
+<connect gate="G$1" pin="P14" pad="P14"/>
+<connect gate="G$1" pin="P15" pad="P15"/>
+<connect gate="G$1" pin="P16" pad="P16"/>
+<connect gate="G$1" pin="P17" pad="P17"/>
+<connect gate="G$1" pin="P18" pad="P18"/>
+<connect gate="G$1" pin="P19" pad="P19"/>
+<connect gate="G$1" pin="P2" pad="P2"/>
+<connect gate="G$1" pin="P20" pad="P20"/>
+<connect gate="G$1" pin="P3" pad="P3"/>
+<connect gate="G$1" pin="P4" pad="P4"/>
+<connect gate="G$1" pin="P5" pad="P5"/>
+<connect gate="G$1" pin="P6" pad="P6"/>
+<connect gate="G$1" pin="P7" pad="P7"/>
+<connect gate="G$1" pin="P8" pad="P8"/>
+<connect gate="G$1" pin="P9" pad="P9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>
