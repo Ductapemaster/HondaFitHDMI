@@ -1,15 +1,15 @@
-
-
 // -------------------------------------------------------------
-// can_loopback for Teensy 3.1
+// can_passthrough_monitor for Teensy 3.1
+// by ductapemaster
 //
-// MCP2515 interface sends frame out and internal CAN interface receives it.
-// Received data is passed to the serial port.
+// Receives on internal CAN interface and copies all data to 
+// MCP2515 interface.  Works only in one direction.
+//
+// Received frames are printed to serial port for monitoring
 
 #include <FlexCAN.h>
-#include <teensy_mcp_can.h>
-//#include <SPI.h>
-#include <spi4teensy3.h>
+#include <mcp_can.h>
+#include <SPI.h>
 
 // LED for receive indication.  Can't use onboard one because it shares the SPI SCLK pin
 int led = 14;
@@ -29,16 +29,15 @@ static CAN_message_t rxmsg;
 //MCP library requires CS pin as argument.  Use default
 const int csPin = 10;
 MCP_CAN CANOut(csPin);
-unsigned char buf[8] = {0, 1, 2, 3, 4, 5, 6, 7};
 
 // -------------------------------------------------------------
 static void printCanFrame(CAN_message_t f)
 {
       Serial.print(millis());
       Serial.print("ms");
-      Serial.print("\t0x");
+      Serial.print("\t");
       Serial.print(f.id, HEX);
-      Serial.print("\t[");
+      Serial.print("[\t");
       Serial.print(f.len);
       Serial.print("]\t");
       for (int i = 0; i < f.len; i++) 
@@ -63,13 +62,14 @@ void setup(void)
   delay(1000);
   
   // F() stores string in flash rather than RAM
-  Serial.println(F("Teensy CAN Bus Loopback Test"));
+  Serial.println(F("Teensy CAN Passthrough and Monitoring"));
 
   Serial.print(F("Initializing MCP2515 interface..."));
 
   // Attempt to initialize module
   while (CAN_OK != CANOut.begin(CAN_125KBPS))
   {
+    // Loops forever - probably should implement some sort of timeout.  Watchdog?
     Serial.print(".");
     delay(100);
   }
@@ -86,17 +86,15 @@ void loop(void)
 
       // Toggle our LED to show bus activity
       digitalWrite(led, 1);
+      
       printCanFrame(rxmsg);
       
+      // ID, CAN Mode: 1=extended, buffer length, buffer
+      CANOut.sendMsgBuf(rxmsg.id, 1, rxmsg.len, rxmsg.buf);
+      
     }
-    delay(10);
+
     digitalWrite(led, 0);
-
-    delay(250);
-
-    CANOut.sendMsgBuf(0x1ABC1234, 1, 8, buf);
-
-    delay(250);
 
 }
 
