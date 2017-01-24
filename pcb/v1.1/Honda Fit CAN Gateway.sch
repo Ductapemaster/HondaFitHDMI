@@ -9259,6 +9259,7 @@ Source: www.kingbright.com</description>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
+<part name="R8" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -9285,8 +9286,8 @@ Source: www.kingbright.com</description>
 <instance part="C3" gate="G$1" x="53.34" y="139.7" rot="MR0"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0"/>
-<instance part="P+3" gate="1" x="106.68" y="180.34" smashed="yes">
-<attribute name="VALUE" x="109.22" y="182.88" size="1.778" layer="96" rot="R180"/>
+<instance part="P+3" gate="1" x="109.22" y="190.5" smashed="yes">
+<attribute name="VALUE" x="111.76" y="193.04" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R2" gate="G$1" x="187.96" y="91.44"/>
 <instance part="R3" gate="G$1" x="187.96" y="83.82"/>
@@ -9304,6 +9305,10 @@ Source: www.kingbright.com</description>
 <instance part="R7" gate="G$1" x="111.76" y="152.4" smashed="yes">
 <attribute name="NAME" x="107.95" y="153.8986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="113.03" y="154.178" size="1.778" layer="96"/>
+</instance>
+<instance part="R8" gate="G$1" x="109.22" y="180.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="107.7214" y="176.53" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="107.442" y="181.61" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -9446,10 +9451,9 @@ Source: www.kingbright.com</description>
 <junction x="53.34" y="144.78"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="RESET/"/>
+<pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
-<wire x1="101.6" y1="172.72" x2="106.68" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="172.72" x2="106.68" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="187.96" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HUCAN_RX" class="0">
@@ -9566,6 +9570,14 @@ Source: www.kingbright.com</description>
 <pinref part="U2" gate="G$1" pin="SCK"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="152.4" x2="106.68" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="RESET/"/>
+<wire x1="101.6" y1="172.72" x2="109.22" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="172.72" x2="109.22" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
