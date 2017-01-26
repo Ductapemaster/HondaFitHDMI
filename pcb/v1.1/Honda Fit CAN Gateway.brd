@@ -1727,7 +1727,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R11" library="resistor" package="R0805" value="0R" x="43.18" y="3.556" smashed="yes" rot="MR90">
 <attribute name="NAME" x="44.45" y="3.683" size="0.8128" layer="26" rot="MR90"/>
 </element>
-<element name="R12" library="resistor" package="R0805" value="10k" x="25.4" y="23.368" smashed="yes" rot="MR180"/>
+<element name="R12" library="resistor" package="R0805" value="0R" x="25.4" y="23.368" smashed="yes" rot="MR180"/>
 </elements>
 <signals>
 <signal name="3.3V">

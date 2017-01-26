@@ -8266,7 +8266,7 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <part name="JP1" library="pinhead" deviceset="PINHD-1X4" device=""/>
 <part name="R10" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
 <part name="R11" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
-<part name="R12" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="R12" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
