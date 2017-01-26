@@ -8234,7 +8234,6 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="U2" library="MCP2515_MT" deviceset="MCP2515*" device="TSOP"/>
-<part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="C3" library="resistor" deviceset="C-EU" device="C0603" value="100n"/>
@@ -8265,6 +8264,10 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <part name="C1" library="resistor" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X4" device=""/>
+<part name="R10" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
+<part name="R11" library="resistor" deviceset="R-US_" device="R0805" value="0R"/>
+<part name="R12" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="P+7" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8277,9 +8280,6 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 </instance>
 <instance part="SUPPLY1" gate="GND" x="218.44" y="147.32"/>
 <instance part="U2" gate="G$1" x="81.28" y="144.78"/>
-<instance part="P+4" gate="1" x="53.34" y="149.86" smashed="yes">
-<attribute name="VALUE" x="55.88" y="152.4" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="SUPPLY4" gate="GND" x="53.34" y="127"/>
 <instance part="SUPPLY5" gate="GND" x="40.64" y="109.22"/>
 <instance part="C3" gate="G$1" x="53.34" y="139.7" rot="MR0"/>
@@ -8319,6 +8319,21 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 </instance>
 <instance part="C1" gate="G$1" x="66.04" y="86.36" rot="MR0"/>
 <instance part="SUPPLY7" gate="GND" x="66.04" y="71.12"/>
+<instance part="R10" gate="G$1" x="152.4" y="114.3" smashed="yes">
+<attribute name="NAME" x="148.59" y="115.7986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="153.67" y="116.078" size="1.778" layer="96"/>
+</instance>
+<instance part="R11" gate="G$1" x="152.4" y="106.68" smashed="yes">
+<attribute name="NAME" x="148.59" y="108.1786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="153.67" y="108.458" size="1.778" layer="96"/>
+</instance>
+<instance part="R12" gate="G$1" x="45.72" y="144.78" smashed="yes">
+<attribute name="NAME" x="41.91" y="146.2786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="46.99" y="146.558" size="1.778" layer="96"/>
+</instance>
+<instance part="P+7" gate="1" x="38.1" y="152.4" smashed="yes">
+<attribute name="VALUE" x="40.64" y="154.94" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8453,17 +8468,6 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <wire x1="218.44" y1="172.72" x2="218.44" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="53.34" y1="147.32" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="144.78" x2="60.96" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="144.78" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="VCC"/>
-<wire x1="60.96" y1="142.24" x2="63.5" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="144.78" x2="53.34" y2="142.24" width="0.1524" layer="91"/>
-<junction x="53.34" y="144.78"/>
-</segment>
-<segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 <wire x1="109.22" y1="187.96" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
@@ -8483,6 +8487,12 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <junction x="66.04" y="96.52"/>
 <junction x="66.04" y="91.44"/>
 </segment>
+<segment>
+<pinref part="P+7" gate="1" pin="+5V"/>
+<wire x1="38.1" y1="149.86" x2="38.1" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="144.78" x2="40.64" y2="144.78" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="HUCAN_RX" class="0">
 <segment>
@@ -8496,20 +8506,6 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <pinref part="U2" gate="G$1" pin="TXCAN"/>
 <wire x1="63.5" y1="172.72" x2="53.34" y2="172.72" width="0.1524" layer="91"/>
 <label x="53.34" y="172.72" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="PARK_SW" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="22/A8/T/PWM"/>
-<wire x1="167.64" y1="116.84" x2="160.02" y2="116.84" width="0.1524" layer="91"/>
-<label x="160.02" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="HFL" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="23/A9/T/PWM"/>
-<wire x1="167.64" y1="114.3" x2="160.02" y2="114.3" width="0.1524" layer="91"/>
-<label x="160.02" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -8606,6 +8602,51 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <label x="96.52" y="76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
+<net name="HFL" class="0">
+<segment>
+<label x="139.7" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="114.3" x2="147.32" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PARK_SW" class="0">
+<segment>
+<label x="139.7" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="106.68" x2="147.32" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="157.48" y1="114.3" x2="160.02" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="114.3" x2="160.02" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="22/A8/T/PWM"/>
+<wire x1="160.02" y1="116.84" x2="167.64" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="157.48" y1="106.68" x2="162.56" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="106.68" x2="162.56" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="23/A9/T/PWM"/>
+<wire x1="162.56" y1="114.3" x2="167.64" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<wire x1="53.34" y1="144.78" x2="60.96" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="144.78" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="VCC"/>
+<wire x1="60.96" y1="142.24" x2="63.5" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="144.78" x2="53.34" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="50.8" y1="144.78" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
+<junction x="53.34" y="144.78"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -8628,7 +8669,7 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <instance part="FRAME2" gate="G$2" x="172.72" y="0"/>
 <instance part="R1" gate="G$1" x="111.76" y="76.2"/>
 <instance part="R4" gate="G$1" x="147.32" y="127"/>
-<instance part="JP1" gate="A" x="81.28" y="68.58" rot="R180"/>
+<instance part="JP1" gate="A" x="71.12" y="71.12" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -8723,8 +8764,10 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <label x="119.38" y="121.92" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="83.82" y1="66.04" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
-<label x="101.6" y="66.04" size="1.27" layer="95" xref="yes"/>
+<wire x1="73.66" y1="73.66" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="73.66" x2="81.28" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="78.74" x2="83.82" y2="78.74" width="0.1524" layer="91"/>
+<label x="83.82" y="78.74" size="1.27" layer="95" xref="yes"/>
 <pinref part="JP1" gate="A" pin="2"/>
 </segment>
 </net>
@@ -8735,8 +8778,10 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <label x="119.38" y="127" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="83.82" y1="63.5" x2="101.6" y2="63.5" width="0.1524" layer="91"/>
-<label x="101.6" y="63.5" size="1.27" layer="95" xref="yes"/>
+<wire x1="73.66" y1="76.2" x2="78.74" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="76.2" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="81.28" x2="83.82" y2="81.28" width="0.1524" layer="91"/>
+<label x="83.82" y="81.28" size="1.27" layer="95" xref="yes"/>
 <pinref part="JP1" gate="A" pin="1"/>
 </segment>
 </net>
@@ -8746,11 +8791,11 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <wire x1="124.46" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 <label x="93.98" y="71.12" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="71.12" x2="83.82" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="76.2" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="76.2" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="104.14" y1="71.12" x2="73.66" y2="71.12" width="0.1524" layer="91"/>
 <junction x="104.14" y="71.12"/>
-<pinref part="JP1" gate="A" pin="4"/>
 </segment>
 </net>
 <net name="!HUCAN" class="0">
@@ -8759,11 +8804,11 @@ Datasheet: http://www.ctscorp.com/wp-content/uploads/2015/11/008-0256-0.pdf</des
 <wire x1="124.46" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
 <label x="93.98" y="68.58" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="119.38" y1="68.58" x2="83.82" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="76.2" x2="119.38" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="76.2" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="73.66" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
 <junction x="119.38" y="68.58"/>
-<pinref part="JP1" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="HUCAN_TX" class="0">
