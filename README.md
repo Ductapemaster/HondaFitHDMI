@@ -14,5 +14,5 @@ Please see the Wiki for the most updated information!
 
 **./wiki**: Wiki content
 
-#Git-iquette
+# Git-iquette
 Please forgive my tresspasses on the typical Git workflow.  This is my first solo git-tracked project and I'm learning as I go along!
