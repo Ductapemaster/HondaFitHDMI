@@ -5,7 +5,7 @@ A demonstration of the prototype hardware can be found here: http://youtu.be/ffW
 
 Please see the Wiki for the most updated information!
 
-##Contents
+## Contents
 **./can_analysis**: Captured data from CAN bus.  Analysis spreadsheet showing various IDs and their functions
 
 **./proof_of_concept**: Files relating to the proof of concept hardware and software
