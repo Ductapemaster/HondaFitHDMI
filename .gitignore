@@ -1,0 +1,13 @@
+# Sublime project
+*.sublime*
+
+# Eagle backups
+*.s#*
+*.b#*
+*.l#*
+*.epf
+
+# Documents
+*.csv
+*.xls
+*.xlsx
