@@ -5,6 +5,7 @@
 *.s#*
 *.b#*
 *.l#*
+*.epf
 
 # Documents
 *.csv
